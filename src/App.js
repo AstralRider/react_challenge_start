@@ -14,17 +14,14 @@ function App() {
   };
 
   const contactInfo = (name, number, email) => {
-    setContacts(
-      ...(prevContact) => [{ name: name, number: number, email: email }]
-    );
+    setContacts([...contacts, { name: name, number: number, email: email }]);
   };
 
   const appointmentInfo = (title, contact, date, time) => {
-    setAppointments(
-      ...(prevAppt) => [
-        { title: title, contact: contact, date: date, time: time },
-      ]
-    );
+    setAppointments([
+      ...appointments,
+      { title: title, contact: contact, date: date, time: time },
+    ]);
   };
 
   return (
@@ -43,7 +40,7 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-            <ContactsPage contactState={contacts} contactFunc={contactInfo} />
+            <ContactsPage contacts={contacts} addContact={contactInfo} />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
             <AppointmentsPage
