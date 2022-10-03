@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TileList } from "../../../../../../Downloads/react_challenge_solution/off-platform/src/components/tileList/TileList";
+import { TileList } from "../../components/tileList/TileList";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 
 export const ContactsPage = ({ contacts, addContact }) => {
