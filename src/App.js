@@ -44,8 +44,9 @@ function App() {
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
             <AppointmentsPage
-              appointmentsState={appointments}
-              appointmentFunc={appointmentInfo}
+              appointments={appointments}
+              addAppointment={appointmentInfo}
+              contacts={contacts}
             />
           </Route>
         </Switch>
