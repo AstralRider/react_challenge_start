@@ -14,7 +14,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
         setDuplicate(true);
       }
     }
-  }, [contacts, name]);
+  }, [contacts, name, duplicate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
